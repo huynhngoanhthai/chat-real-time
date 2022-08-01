@@ -23,6 +23,7 @@ io.on("connection", function (socket) {
 });
 
 const POST = process.env.POST || 3000;
-server.listen(POST, () => {
-  console.log("listening on *:3000");
+const host = "0.0.0.0";
+server.listen(POST, host, () => {
+  console.log(host, POST, "listening on *:3000");
 });
